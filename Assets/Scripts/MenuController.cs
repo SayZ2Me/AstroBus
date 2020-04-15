@@ -11,9 +11,6 @@ public class MenuController : MonoBehaviour
     public GameObject ButtonsCredits;
     public GameObject SceneUpgrade;
 
-    public GameObject GameSettings;
-    public GameObject GameScene;
-
 
     // Start is called before the first frame update
     void Start()
@@ -63,11 +60,6 @@ public class MenuController : MonoBehaviour
     public void NewGameLoadSceneGame()
     {
         Application.LoadLevel("Game");
-    }
-
-    public void LoadSceneUpgradeMenu()
-    {
-        Application.LoadLevel("UpgradeMenu");
     }
 
     public void ExitGame()
