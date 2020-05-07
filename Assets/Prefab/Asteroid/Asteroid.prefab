@@ -101,7 +101,7 @@ MonoBehaviour:
   Health: 3
   explosion: {fileID: 0}
   breakdown: {fileID: 0}
-  coin: {fileID: 0}
+  coin: {fileID: 5189662280061867169, guid: fa408a937c796524597d9a4151d6ecf7, type: 3}
 --- !u!54 &2558980227208515172
 Rigidbody:
   m_ObjectHideFlags: 0

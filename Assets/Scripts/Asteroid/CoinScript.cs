@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-public int coinlifetime; // время жизни монетки
+    private Rigidbody bus;
+    private Rigidbody rb;
 
-    // пока не переделал на притяжение к кораблю
     void Start()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D> ();
-		rb.AddForce (transform.up * 100f, ForceMode2D.Impulse);
-		Destroy(gameObject, coinlifetime); // падение и уничтожение монетки
+        bus = (GameObject.Find("Bus")).GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
+
+    void Update() 
+    {
+        Vector3 directionToBus = (bus.position - transform.position).normalized;
+        rb.velocity = directionToBus * 100;
+
+    }
+
+    void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.name == "Bus")
+            Destroy(gameObject);
+    }
+
 
 
 }

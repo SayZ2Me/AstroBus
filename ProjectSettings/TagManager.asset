@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Asteroid
   - AsteroidEmitter
+  - Bus
   layers:
   - Default
   - TransparentFX

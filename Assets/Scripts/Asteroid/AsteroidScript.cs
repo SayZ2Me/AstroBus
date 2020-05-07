@@ -38,6 +38,7 @@ public class AsteroidScript : MonoBehaviour
         Debug.Log("Destroyed");
             //Instantiate(breakdown, transform.position, transform.rotation);
             Destroy(gameObject);
+            Instantiate(coin, transform.position, Quaternion.Euler(0, 0, 0));
         }
     }
 }
