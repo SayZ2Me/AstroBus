@@ -38,7 +38,10 @@ public class AsteroidScript : MonoBehaviour
         Debug.Log("Destroyed");
             //Instantiate(breakdown, transform.position, transform.rotation);
             Destroy(gameObject);
-            Instantiate(coin, transform.position, Quaternion.Euler(0, 0, 0));
+
+            int a = Random.Range(3, 6);
+            for (int i=0; i<a; i++)
+                Instantiate(coin, transform.position, Quaternion.Euler(0, 0, 0));
         }
     }
 }
